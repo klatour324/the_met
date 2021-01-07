@@ -11,10 +11,3 @@ class ExhibitTest < Minitest::Test
     assert_equal 0, exhibit.cost
   end
 end
-# # => #<Exhibit:0x00007fcb13bd22d0...>
-#
-# pry(main)> exhibit.name
-# # => "Gems and Minerals"
-#
-# pry(main)> exhibit.cost
-# # => 0
