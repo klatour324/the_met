@@ -31,7 +31,7 @@ class Museum
 
   def patrons_by_exhibit_interest
     @exhibits.group_by do |exhibit|
-      exhibit
+      exhibit.name
     end
   end
 end
