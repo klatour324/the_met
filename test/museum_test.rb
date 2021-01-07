@@ -13,13 +13,13 @@ class MuseumTest < Minitest::Test
     assert_instance_of Museum, dmns
     assert_equal "Denver Museum of Nature and Science", dmns.name
   end
+
+  def test_it_has_no_exhibits_at_first
+    dmns = Museum.new("Denver Museum of Nature and Science")
+
+    assert_equal [], dmns.exhibits
+  end
 end
-
-
-
-# # => []
-# pry(main)> dmns.exhibits
-
 
 # pry(main)> gems_and_minerals = Exhibit.new({name: "Gems and Minerals", cost: 0})
 # # => #<Exhibit:0x00007fb400bbcdd8...>
