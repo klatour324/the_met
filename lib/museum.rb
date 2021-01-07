@@ -20,6 +20,18 @@ class Museum
   end
 
   def admit(patron)
-    @patrons.push(patron)
+    @exhibits.any? do |exhibit|
+      if patron.spending_money < exhibit.cost
+        @patrons.push(patron)
+      else
+        @patrons.push(patron)
+      end
+    end
+  end
+
+  def patrons_by_exhibit_interest
+    @exhibits.group_by do |exhibit|
+      exhibit
+    end
   end
 end
